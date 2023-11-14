@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #f2f1f4;
+  color: #19171c;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section,
+#section1,
+#section2,
+#section3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 0.2rem;
+  width: 50vw;
+  height: 2rem;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  margin-top: -0.5rem;
+}
+.section.even,
+#section2 {
+  background-color: #cacaca;
+  color: #545559;
+}
+.section.odd,
+#section1,
+#section3 {
+  background-color: #bababa;
+  color: #545559;
+}
+.section:hover,
+#section1:hover,
+#section2:hover,
+#section3:hover {
+  background-color: #aaaaaa;
+  color: #f2f1f4;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.section.active,
+#section1.active,
+#section2.active,
+#section3.active {
+  background-color: #545559;
+  color: #f2f1f4;
+  height: 2rem;
+}
+.description {
+  display: none;
+}
+
+.active + div.description {
+  display: block;
+  width: 50vw;
+  padding: 0.4rem;
+  border-right: 0.2rem solid #545559;
+  border-bottom: 0.2rem solid #545559;
+  border-left: 0.2rem solid #545559;
+  background-color: #f2f1f4;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  margin-bottom: 1.2rem;
+}
